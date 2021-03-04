@@ -1,5 +1,15 @@
-<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js">
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A-Frame - Video Texture</title>
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+</head>
+
+<body>
+
+<script>
+
 AFRAME.registerComponent('video-controls', {
 	
 	init: function()
@@ -27,13 +37,67 @@ AFRAME.registerComponent('video-controls', {
 	}
 	
 });
-</script>
-<body style='margin : 0px; overflow: hidden;'>
-  <a-scene>
-  <a-assets>
-    <video id="video" controls muted autoplay loop="true" src="Penguins2.mp4" playsinline="" webkit-playsinline="" crossorigin="anonymous"></video>
-  </a-assets>
 
-  <!-- Using the asset management system. -->
-  <a-video id="video-display" width="16" height="9" position="0 0 -20" src="#video" material="" geometry=""></a-video>
-  </a-scene>
+</script>
+
+<a-scene>
+	
+	<a-assets timeout="10000">
+		<img id="grid" src="images/border.png" crossorigin="anonymous" />
+		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
+		<video id="video" loop="true" src="Penguins.mp4" autoplay></video>
+	</a-assets>
+
+	<a-entity movement-controls="speed: 0.1; fly: false;" position="0 0 0">
+		<a-entity camera position="0 1.5 1" look-controls></a-entity>
+		<a-entity id="leftHand" laser-controls="hand: left" raycaster="" line="color: #FF00FF"></a-entity>
+		<a-entity id="rightHand" laser-controls="hand: right" raycaster="" line="color: #FFFF00"></a-entity>
+	</a-entity>
+	
+	<a-sky 
+		rotation = "0 0 0"
+		color = "#FFFFFF"
+		material = "src: #sky">
+	</a-sky>
+	
+	<a-plane
+		width="100" height="100"
+		position=" 0.00 0.00 0.00" 
+		rotation="-90 0 0" 
+		color="#888888" 
+		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.75"
+		shadow="cast: false; receive: true">
+	</a-plane>
+	
+	<a-plane
+		id = "video-border"
+		width = "17" height = "10"
+		position = "0 5 -20"
+		color = "#440000"
+		video-controls>		
+		<a-video  
+			id = "video-display"
+			width="16" height="9" 
+			position="0 0 0.1"
+			src="#video">
+		</a-video>
+	</a-plane>
+	
+</a-scene>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
