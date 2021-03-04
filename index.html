@@ -1,14 +1,17 @@
 <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js">
+</script>
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene>
   <a-assets>
-    <video id="penguin-sledding" autoplay loop="true" src="Penguins.mp4"></video>
+    <video id="video" loop="true" src="Penguins.mp4" autoplay="" playsinline="" webkit-playsinline="" crossorigin="anonymous"></video>
+    <video id="penguin-sledding" autoplay loop="true" src="http://jamesthomson.org.uk/files/videotest/penguins.mp4"></video>
   </a-assets>
 
   <!-- Using the asset management system. -->
-  <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
-
+  <!--<a-video src="#video" width="16" height="9" position="0 0 -20"></a-video>-->
+<a-video id="video-display" width="16" height="9" position="0 0 -20" src="#video" material="" geometry="">
+		</a-video>
   <!-- Defining the URL inline. Not recommended but more comfortable for web developers. 
-  <a-video src="Penguins.mp4"></a-video>-->
+  <a-video src="http://jamesthomson.org.uk/files/videotest/penguins.mp4"></a-video>-->
 </a-scene>
