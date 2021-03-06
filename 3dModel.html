@@ -8,8 +8,9 @@
 		<a-assets>
 			<a-asset-items id="ship" src="assets/scene.gltf"></a-asset-items>
 		</a-assets>
-		
-		<a-entity scale=".2 .2 .2" gltf-model="#ship"></a-entity>
-	<a-scene>
+		<a-entity scale=".2 .2 .2">
+			<a-entity gltf-model="#ship"></a-entity>
+		</a-entity>
+	</a-scene>
 </body>
 </html>
