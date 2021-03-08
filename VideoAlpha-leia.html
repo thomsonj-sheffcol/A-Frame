@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <!-- <script src="aframe-ar.js"></script> use this (v1.6) if this demo ever breaks-->
+  </head>
+  <body>
+    <!--<a id="playButton" onclick="play('alpha')"><div class="btn btn-primary play-overlay menu-overlay"></div></a>-->
+    <a-scene >
+    <a-assets>
+        <video id="alpha" preload="auto" src="video/PrincessLeia.webm" width="960" height="540" autoplay="" loop="true" crossorigin="anonymous" muted="" playsinline="" webkit-playsinline=""></video>
+    </a-assets>
+
+    <!-- Using the asset management system. -->
+   
+    <a-marker-camera preset='hiro'>
+           <a-video id = "vid"  rotation =  "-62.584 -3.936 4.509"  scale="5 5 1" src="#alpha">
+      <video scale= "20 20 1" src="#source"></video></a-video>
+    </a-marker-camera>
+    </a-scene>
+  </body>
