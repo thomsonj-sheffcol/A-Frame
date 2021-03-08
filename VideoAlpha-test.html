@@ -8,13 +8,13 @@
     <!--<a id="playButton" onclick="play('alpha')"><div class="btn btn-primary play-overlay menu-overlay"></div></a>-->
     <a-scene >
     <a-assets>
-        <video id="alpha" autoplay loop="true" src="video/test.webm"></video>
+        <video id="alpha" loop="true" src="video/test.webm" autoplay></video>
     </a-assets>
 
     <!-- Using the asset management system. -->
    
     <a-marker-camera preset='hiro'>
-		<a-video id = "vid"  rotation =  "-62.584 -3.936 4.509"  scale="5 5 1" src="src="video/test.webm">
+		<a-video id = "vid"  rotation =  "-62.584 -3.936 4.509"  scale="5 5 1" src="video/test.webm">
 			<video scale= "20 20 1" src="#source"></video>
 		</a-video>
     </a-marker-camera>
