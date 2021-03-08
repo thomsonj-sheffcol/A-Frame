@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <!-- <script src="aframe-ar.js"></script> use this (v1.6) if this demo ever breaks-->
+  </head>
+  <body>
+    <!--<a id="playButton" onclick="play('alpha')"><div class="btn btn-primary play-overlay menu-overlay"></div></a>-->
+    <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+		<a-assets>
+			<video id="videoTest" preload="auto" src="videos/test.webm" width="960" height="540" autoplay="" loop="true" crossorigin="anonymous" muted="" playsinline="" webkit-playsinline=""></video>
+		</a-assets>
+		<a-entity material="shader: flat; src: [object HTMLVideoElement]" geometry="primitive: plane; width: 160; height: 90" position="0 60 -250" rotation="0 35 0" play-on-click="" visible="">
+		</a-entity>
+		<a-camera camera="" rotation="0.11459155902616465 0 0" look-controls="" wasd-controls="" data-aframe-inspector-original-camera="">
+			<a-entity position="0 0 -1.5" text="align: center; width: 6; wrapCount: 100; color: black; value: Click or tap to 	start video" hide-on-play="#videoTest">
+		</a-entity>
+		</a-camera>
+	<div class="a-loader-title" style="display: none;">Video</div></a-scene>
+  </body>
+</html>
