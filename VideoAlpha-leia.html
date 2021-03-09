@@ -14,14 +14,14 @@
     <a-scene >
     <button onclick="myFunction()" type="button">Play Video</button>
 	<a-assets>
-        <video id="alpha" preload="auto" src="video/PrincessLeia.webm" width="960" height="540" controls autoplay="true" loop="true" crossorigin="anonymous" muted="true" playsinline="true" webkit-playsinline="true"></video>
+        <video id="alpha" src="video/PrincessLeia.webm" width="960" height="540" autoplay loop playsinline="true" webkit-playsinline="true"></video>
     </a-assets>
 
     <!-- Using the asset management system. -->
    
     <a-marker-camera preset='hiro'>
 		<a-video id="vid" rotation="0 0 4.509" scale="5 5 5" src="#alpha" position="-0.2 1.74 0" material="" geometry="">
-			<video id="myVideo" scale="20 20 1" src="#source">
+			<video id="myVideo" src="video/PrincessLeia.webm">
 			</video>
 		</a-video>
     </a-marker-camera>
