@@ -2,36 +2,24 @@
   <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-    <script>
-	this.video = document.querySelector(this.el.getAttribute('src'))
-	this.video.load()
-	</script>
-
+  
   </head>
   <body>
   
   <!--<a id="playButton" onclick="play('alpha')"><div class="btn btn-primary play-overlay menu-overlay"></div></a>-->
     <a-scene >
     <button onclick="myFunction()" type="button">Play Video</button>
-	<!--<a-assets>
+	<a-assets>
         <video id="alpha" src="video/PrincessLeia.webm" width="960" height="540" autoplay loop playsinline="true" webkit-playsinline="true"></video>
-    </a-assets>-->
-
-    <!-- Using the asset management system. -->
+    </a-assets>
    
     <a-marker-camera preset='hiro'>
 		<a-video id="vid" rotation="0 0 4.509" scale="5 5 5" src="#alpha" position="-0.2 1.74 0" material="" geometry="">
-			<video id="myVideo" src="video/PrincessLeia.webm" width="640" height="360" autoplay loop playsinline="true" webkit-playsinline="true">
+			<video id="myVideo" src="#source">
 			</video>
 		</a-video>
     </a-marker-camera>
     </a-scene>
-	<script> 
-	function myFunction() { 
-	document.getElementById("alpha").src = "video/PrincessLeia.webm";
-	document.getElementById("myVideo").load();
-	} 
-	</script>
   </body>
   
   
