@@ -9,7 +9,7 @@
 <p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
 
 <button onclick="myFunction()">Click me</button>
-<video>
+<video id="myVid">
 <source src="video/sintel.mp4">
   not supported
 </video>
@@ -18,7 +18,8 @@
 
 <script>
 function myFunction() {
-  document.getElementById("demo").style.display = 'none';
+ // document.getElementById("demo").style.display = 'none';
+ document.getElementById("myVid").play();
 }
 </script>
 
