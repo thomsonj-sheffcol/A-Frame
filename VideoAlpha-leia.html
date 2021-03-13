@@ -7,7 +7,11 @@
   <body>
   
     <a-scene id="scene" >
-    <button style="z-index: -1'" onclick="myFunction()" type="button">Play Video</button>
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+    <button>
+        Play Video
+    </button>
+	<button onclick="myFunction()" type="button">Play Video</button>
 	<a-assets>
         <video id="alpha" src="video/PrincessLeia.webm" width="960" height="540" autoplay="" loop="true" crossorigin="anonymous" muted="" playsinline="" webkit-playsinline=""></video>
     </a-assets>
