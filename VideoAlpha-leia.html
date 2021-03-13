@@ -20,11 +20,12 @@
         Play Video
     </button></div>
 	<a-assets>
-        <video id="alpha" src="video/PrincessLeia.webm" width="960" height="540" crossorigin="anonymous" playsinline="" webkit-playsinline=""></video>
+        <video id="alpha" src="video/PrincessLeia.webm" width="960" height="540" loop="" crossorigin="anonymous" playsinline="" webkit-playsinline=""></video>
     </a-assets>
    
     <a-marker-camera preset='hiro'>
 		<a-video id="myVid" src="#alpha" scale="3.4 2 1" position="0 0 0"></a-video>
+		<a-entity id="info" text="value: Click anywhere to play the video"></a-entity>
     </a-marker-camera>
     </a-scene>
 	
