@@ -2,55 +2,17 @@
 <html>
 
 <head>
-	<title>A-Frame - Video Texture</title>
-	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<title>A-Frame Basic Examples</title>
 </head>
 
 <body>
 
-<a-scene>
-	
-	<a-assets timeout="10000">
-		<img id="grid" src="images/border.png" crossorigin="anonymous" />
-		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
-		<video id="video" loop="true" src="sintel.mp4" autoplay></video>
-	</a-assets>
+<a href = "basicimage.html">Basic Image JPG</a>
+<a href = "basicimage.html">Basic Image PNG with Alpha</a>
+<a href = "3dModel.html">Basic 3D Model</a>
+<a href = "basicvideo.html">Video - Basic</a>
+<a href = "VideoAlpha-test.html">Video - Test (webm / alpha)</a>
+<a href = "VideoAlpha-leia.html">Video - Leia (webm / alpha)</a>
 
-	<a-entity movement-controls="speed: 0.1; fly: false;" position="0 0 0">
-		<a-entity camera position="0 1.5 1" look-controls></a-entity>
-		<a-entity id="leftHand" laser-controls="hand: left" raycaster="" line="color: #FF00FF"></a-entity>
-		<a-entity id="rightHand" laser-controls="hand: right" raycaster="" line="color: #FFFF00"></a-entity>
-	</a-entity>
-	
-	<a-sky 
-		rotation = "0 0 0"
-		color = "#FFFFFF"
-		material = "src: #sky">
-	</a-sky>
-	
-	<a-plane
-		width="100" height="100"
-		position=" 0.00 0.00 0.00" 
-		rotation="-90 0 0" 
-		color="#888888" 
-		material="src: #grid; repeat:100 100; transparent: true; opacity: 0.75"
-		shadow="cast: false; receive: true">
-	</a-plane>
-	
-	<a-plane
-		id = "video-border"
-		width = "17" height = "10"
-		position = "0 5 -20"
-		color = "#440000"
-		video-controls>		
-		<a-video  
-			id = "video-display"
-			width="16" height="9" 
-			position="0 0 0.1"
-			src="#video">
-		</a-video>
-	</a-plane>
-	
-</a-scene>
 </body>
 </html>
