@@ -21,8 +21,8 @@
     </a-scene>
 	
 	<script>
-function myFunction() {
- // document.getElementById("alpha").style.display = 'none';
+/*function myFunction() {
+ document.getElementById("alpha").style.display = 'none';
  document.getElementById("alpha").play();
 }
 var video = document.getElementById("alpha");
@@ -30,7 +30,13 @@ var video = document.getElementById("alpha");
         if (video.paused == true) {
              video.play();
         }
-        });
+        });*/
+var vid = document.getElementById("alpha");
+vid.oncanplaythrough = function() {
+    if (video.paused == true) {
+             video.play();
+        }
+};
 </script>
   </body>
   
