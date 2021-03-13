@@ -8,7 +8,7 @@
   
     <a-scene>
     <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-    <button>
+    <button onclick="myFunction()">
         Play Video
     </button></div>
 	<a-assets>
@@ -21,6 +21,10 @@
     </a-scene>
 	
 	<script>
+function myFunction() {
+ // document.getElementById("alpha").style.display = 'none';
+ document.getElementById("alpha").play();
+}
 var video = document.getElementById("alpha");
   video.addEventListener("click", function(event) { 
         if (video.paused == true) {
