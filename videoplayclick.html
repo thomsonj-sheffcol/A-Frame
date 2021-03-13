@@ -17,10 +17,10 @@ body {
 
 <button onclick="myFunction()">Play</button>
 <button onclick="myFunction2()">Stop</button>
-<a href="#"><video id="myVid" onclick="myFunction()">
+<video id="myVid" onclick="myFunction()">
 <source src="video/PrincessLeia.webm">
   not supported
-</video></a>
+</video>
 
 </div>
 
@@ -33,6 +33,15 @@ function myFunction2() {
  // document.getElementById("demo").style.display = 'none';
  document.getElementById("myVid").pause();
 }
+var video = document.getElementById("myVid");
+  video.addEventListener("click", function(event) { 
+        if (video.paused == true) {
+             video.play();
+        }
+        else{
+             video.pause();
+        }
+  });
 </script>
 
 </body>
