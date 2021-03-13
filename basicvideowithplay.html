@@ -19,11 +19,12 @@ This version loads a ship on top of the Hiro marker
     </script>
 </head>
 <body>
-    
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	<button>PLAY</button>
+	</div>
 	<a-scene>
 		<a-video src="video/PrincessLeia.webm" rotation="-90 0 0"></a-video>
 		<a-marker-camera preset='hiro'></a-marker-camera>
-        <button id="play-button">Play</button>
 	</a-scene>
 </body>
 </html>
