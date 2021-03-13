@@ -8,22 +8,20 @@ This version loads a ship on top of the Hiro marker
 	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script>
-        var vid = document.getElementById('vid');
-        console.log(vid);
-        document.getElementById('play-button').addEventListener("click", 
-        function(e){
-            this.style.display = 'none';
+        var x = document.getElementById('play-button');
+        var vid = document.getElementById('myVideo')
+        function playMe(){
+            x.style.display = 'none';
             vid.play();
-        }, 
-        false);
+        }
     </script>
 </head>
 <body>
-    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-	<button id="play-button">PLAY</button>
+    <div id="play-button" style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	<button onclick="playME">PLAY</button>
 	</div>
 	<a-scene>
-		<a-video src="video/PrincessLeia.webm" rotation="-90 0 0"></a-video>
+		<a-video id="myVideo" src="video/PrincessLeia.webm" rotation="-90 0 0" autoplay="false"></a-video>
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
