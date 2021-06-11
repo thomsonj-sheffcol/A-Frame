@@ -1,0 +1,19 @@
+  
+<!--
+This version loads a tram on top of the Hiro marker
+-->
+<html>
+<head>
+	<title>Loading a 3d Model Using A-Frame</title>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+	<a-scene embedded arjs>
+		<a-entity scale="0.001 0.001 0.001">
+			<a-entity gltf-model="Tram/scene.gltf" position="0 0 0" rotation="0 90 0">
+		</a-entity>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
+</html>
