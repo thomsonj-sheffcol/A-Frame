@@ -1,11 +1,20 @@
-<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;';>
-       <a-assets>
-            <audio id="sound" src="audio/test.mp3" preload="auto"></audio>
-        </a-assets>
-        <a-marker preset="hiro">
-                <a-box position='0 0.5 0' material='color: black;' soundhandler> 
-                </a-box>
-        </a-marker>
-        <a-entity sound="src: #sound" autoplay="true"></a-entity>
-        <a-entity camera></a-entity>
-</a-scene>
+
+<!--
+This version plays a sound when it sees the the Hiro marker
+-->
+<html>
+<head>
+	<title>Loading an Image Using A-Frame</title>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+                     <audio id="sound" src="audio/test.mp3" preload="auto"></audio>
+              </a-assets>
+              <a-entity sound="src: #sound" autoplay="true"></a-entity>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
+</html>
