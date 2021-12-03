@@ -10,7 +10,8 @@ This version plays a sound when it sees the the Hiro marker
 </head>
 <body>
 	<a-scene>
-              <a-entity sound="src: url(audio/test.mp3); autoplay: true"></a-entity>
+              <a-entity id="clickme" geometry="primitive: box" material="color: blue"
+          position="0 0 0" sound="src: url(audio/test.mp3); autoplay: false; on: click" ></a-entity>
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
