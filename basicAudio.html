@@ -1,0 +1,11 @@
+<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;';>
+       <a-assets>
+            <audio id="sound" src="audio/audio.mp3" preload="auto"></audio>
+        </a-assets>
+        <a-marker preset="hiro">
+                <a-box position='0 0.5 0' material='color: black;' soundhandler> 
+                </a-box>
+        </a-marker>
+        <a-entity sound="src: #sound" autoplay="true"></a-entity>
+        <a-entity camera></a-entity>
+</a-scene>
