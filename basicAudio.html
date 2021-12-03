@@ -10,10 +10,7 @@ This version plays a sound when it sees the the Hiro marker
 </head>
 <body>
 	<a-scene>
-		<a-assets>
-                     <audio id="sound" src="audio/test.mp3" preload="auto"></audio>
-              </a-assets>
-              <a-entity sound="src: #sound" autoplay="true"></a-entity>
+              <a-entity sound="src: url(audio/test.mp3); autoplay: true"></a-entity>
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
