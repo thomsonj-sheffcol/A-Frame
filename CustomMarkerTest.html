@@ -1,0 +1,17 @@
+<!--
+This version loads a picture on top of the Hiro marker
+-->
+<html>
+<head>
+	<title>Loading an Image Using A-Frame</title>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-entity text="value:Polar bears live in Alaska, Canada, Russia, Greenland, and some northern islands owned by Norway, such as Svalbard. Polar bears depend on the sea ice, which forms above the open waters where their seal prey lives.They are vicous killers so keep away from them!" position="3.281 1.088 -1.373" rotation="-72.669 1.18 -0.47" scale="7.986 5.208 1.741"></a-entity>
+    		<a-image src="images/polarbear1.jpg" position="2.971 1.518 -4.223" rotation="-72.659 1.18 0" scale="7.516 3.728 1.081" material="" geometry=""></a-image>
+		<a-marker-camera type='pattern' url='markers/pattern-baboonmarker.patt'></a-marker-camera>
+	</a-scene>
+</body>
+</html>
