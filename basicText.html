@@ -1,9 +1,16 @@
-<!-- basic 10 lines of code box -->
-<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-<body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded arjs='sourceType: webcam;'>
-		<a-entity scale="8 8 8" text="value: Hello World; align: center"></a-entity>
-		<a-marker-camera preset='hiro'></a-marker-camera>
-	</a-scene>
-</body>
+<!--
+This version loads some text on top of the Hiro marker
+-->
+<html>
+	<head>
+		<title>Loading Text Using A-Frame</title>
+		<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene>
+			<a-entity scale="8 8 8" text="value: Hello World; align: center"></a-entity>
+			<a-marker-camera preset='hiro'></a-marker-camera>
+		</a-scene>
+	</body>
+</html>
