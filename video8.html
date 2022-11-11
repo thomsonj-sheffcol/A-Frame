@@ -1,6 +1,7 @@
 <!-- creates a video of princess leia using alpha transparency on a hiro marker -->
 <html>
   <head>
+	  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	  <title>Holographic Leia v8</title>
 	  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 	  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
@@ -8,7 +9,7 @@
   <body>
 	  <a-scene embedded arjs>
 		  <a-marker preset='hiro' arjs-hit-testing="" visible="">
-			  <a-video id="vid" src="video/PrincessLeia.webm" position="0 2 0" autoplay="" loop="true" visibility="true"></a-video>
+			  <a-video id="vid" src="video/sintel.mp4" position="0 2 0" autoplay="" loop="true" visibility="true"></a-video>
 		  </a-marker>
 		  <a-entity camera></a-entity>
 	  </a-scene>
