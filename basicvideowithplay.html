@@ -4,7 +4,7 @@ This version loads a video on top of the Hiro marker with a play / pause functio
 <html>
 <head>
 
-	<title>Loading a video Using A-Frame and play/pause v2</title>
+	<title>Loading a video Using A-Frame and play/pause v3</title>
 	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script>
@@ -36,9 +36,11 @@ This version loads a video on top of the Hiro marker with a play / pause functio
 		<a-camera>
 			<a-cursor></a-cursor>
 		</a-camera>
-		<a-video src="#myVideo"></a-video>
-		<a-image id="videocontrols" src="#play" position="0 -3 0" scale="0.5 0.5 1" play-pause>
-		<!--<a-marker-camera preset='hiro'></a-marker-camera>-->
+		<a-video src="#myVideo">
+			<a-image id="videocontrols" src="#play" position="0 -3 0" scale="0.5 0.5 1" play-pause>
+			</a-image>
+		</a-video>
+		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
 </html>
