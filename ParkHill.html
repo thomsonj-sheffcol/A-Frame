@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <!-- <script src="aframe-ar.js"></script> use this (v1.6) if this demo ever breaks-->
+  </head>
+  <body>
+    <!--<a id="playButton" onclick="play('alpha')"><div class="btn btn-primary play-overlay menu-overlay"></div></a>-->
+    <a-scene>
+      <a-assets>
+        <video id="cncrobot" autoplay loop="true" src="CNC-RobotArm.mp4"></video>
+      </a-assets>
+      <a-video src="#cncrobot" width="16" height="9" position="0 0 -20"></a-video>
+    </a-scene>
+    </body>
