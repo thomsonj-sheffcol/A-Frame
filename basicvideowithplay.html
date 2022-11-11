@@ -1,27 +1,43 @@
 <!--
-This version loads a video of Princess Leia on top of the Hiro marker
+This version loads a video on top of the Hiro marker with a play / pause function
 -->
 <html>
 <head>
 
-	<title>Loading a 3d Model Using A-Frame</title>
+	<title>Loading a video Using A-Frame and play/pause</title>
 	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script>
-        var x = document.getElementById('play-button');
-        var vid = document.getElementById('myVideo');
-        function playMe(){
-            x.style.display = 'none';
-            vid.play();
-        }
+        AFRAME.registerComponent('play-pause',{
+		init: function() {
+			var myvideo = document.queryselector('#myVideo');
+			var videoControls = document.querySelector('#videoControls');
+			this.el.addEventListener('click', function(){
+				if (myVideo.paused) {
+					myVideo.play();
+					videoControls.setAttribute('src','#pause');
+				}
+				else {
+					myVideo.pause();
+					videoControls.setAttribute('src','#play');
+				}
+			});
+		}
+	});
     </script>
 </head>
 <body>
-    <div id="play-button" style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-	<button onclick="playME()">PLAY</button>
-	</div>
-	<a-scene>
-		<a-video id="myVideo" src="video/PrincessLeia.webm" rotation="-90 0 0" autoplay="false" loop="false"></a-video>
+    	<a-scene>
+		<a-assets>
+			<img id="play" src="images/play.png">
+			<img id="pause" src="images/pause.png">
+			<video id="myVideo" src="video/sintel.mp4" loop="true"></video>
+		</a-assets>
+		<a-camera>
+			<a-cursor></a-cursor>
+		</a-camera>
+		<a-video src="#myVideo" rotation="-90 0 0"></a-video>
+		<a-image id="videocontrols" src="#play" position="0 -3 0" scale="0.5 0.5 1" play-pause>
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
