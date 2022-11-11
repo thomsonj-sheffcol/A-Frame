@@ -1,0 +1,17 @@
+<!-- creates a video of princess leia using alpha transparency on a hiro marker -->
+<html>
+  <head>
+	  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	  <title>Holographic Leia v9</title>
+	  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+	  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+	  <a-scene embedded arjs='sourceType: webcam;'>
+		  <a-video id="vid" src="video/sintel.mp4" position="0 2 0" autoplay="" loop="true" visibility="true"></a-video>
+		  <a-marker-camera preset='hiro'></a-marker-camera>
+	  </a-scene>
+  </body>
+</html>
+
+  
